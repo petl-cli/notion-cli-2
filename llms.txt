@@ -33,10 +33,6 @@ List all commands in this group: `notion-api block --help`
 ### `comment`
 
 ```bash
-notion-api comment create-new --notion-version <string>    # Create comment
-```
-
-```bash
 notion-api comment get-list --notion-version <string> --block-id <string>    # Retrieve comments
 ```
 
