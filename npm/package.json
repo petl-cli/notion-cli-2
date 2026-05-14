@@ -1,0 +1,15 @@
+{
+  "name": "@petl-cli/notion-cli-2",
+  "version": "0.1.0",
+  "description": "Generated CLI — notion-api",
+  "bin": {
+    "notion-api": "bin/run.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}
