@@ -1,0 +1,59 @@
+cli:
+  name: notion-api
+  env_prefix: NOTION_API
+  version: "0.1.0"
+
+environments:
+  production: https://api.notion.com
+
+security_schemes:
+  token:
+    type: http
+    scheme: bearer
+
+security:
+  - token: []
+
+client_settings:
+  opts:
+    api_key:
+      type: string
+      read_env: NOTION_API_BEARER_TOKEN
+      auth:
+        security_scheme: token
+
+resources:
+  block:
+    methods:
+      get-children: "get /v1/blocks/{block_id}/children"
+      append-children: "patch /v1/blocks/{block_id}/children"
+      get-details: "get /v1/blocks/{block_id}"
+      remove-block-by-id: "delete /v1/blocks/{block_id}"
+      update-block-by-id: "patch /v1/blocks/{block_id}"
+  page:
+    methods:
+      create-new-page: "post /v1/pages"
+      get-page: "get /v1/pages/{page_id}"
+      update-properties: "patch /v1/pages/{page_id}"
+      get-property-item: "get /v1/pages/{page_id}/properties/{property_id}"
+  database:
+    methods:
+      create-new-database: "post /v1/databases"
+      execute-query: "post /v1/databases/{database_id}/query"
+      get-database: "get /v1/databases/{database_id}"
+      update-database: "patch /v1/databases/{database_id}"
+  user:
+    methods:
+      list-all-users: "get /v1/users"
+      get-user-by-id: "get /v1/users/{user_id}"
+      get-token-bot-user: "get /v1/users/me"
+  comment:
+    methods:
+      get-list: "get /v1/comments"
+      create-new: "post /v1/comments"
+  token:
+    methods:
+      generate-access: "post /v1/oauth/token"
+  search:
+    methods:
+      by-title: "post /v1/search"
