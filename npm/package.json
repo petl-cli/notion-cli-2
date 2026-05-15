@@ -1,6 +1,6 @@
 {
   "name": "@petl-cli/notion-cli-2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generated CLI — notion-api",
   "bin": {
     "notion-api": "bin/run.js"

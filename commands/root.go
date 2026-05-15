@@ -86,7 +86,7 @@ func _fireEvent(cmd *cobra.Command, exitCode int) {
 		ErrorCode:   _invState.errorCode,
 		OutputBytes: _stdoutCounter.n,
 		SessionId:   _sessionID,
-		Version:     "0.1.0",
+		Version:     "0.1.1",
 		OccurredAt:  _invState.startTime,
 		CallerType:  string(_caller.Type),
 		AgentType:   _caller.AgentType,
@@ -96,7 +96,7 @@ func _fireEvent(cmd *cobra.Command, exitCode int) {
 var rootCmd = &cobra.Command{
 	Use:           "notion-api",
 	Short:         "Notion is a new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team.",
-	Version:       "0.1.0",
+	Version:       "0.1.1",
 	SilenceErrors: true, // Execute() handles error printing so Cobra doesn't double-print
 	SilenceUsage:  true, // Don't dump usage on every RunE error
 	// PersistentPreRunE and PersistentPostRunE are assigned in init() to avoid
